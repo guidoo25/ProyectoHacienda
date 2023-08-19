@@ -17,12 +17,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    // Fetch data from API and update the _haciendaResponseList
     _loadData();
   }
 
   void _loadData() async {
-    // Fetch data from API and update the _haciendaResponseList
     final response = await http.get(Uri.parse('http://localhost:3000/api/mediciones/2'));
 
     if (response.statusCode == 200) {
